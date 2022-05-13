@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    
+
+      <link rel="icon" href="folder\button.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundboard</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <audio id="audio1">
+        <source src="folder\hutab.mp3"></source>
+    </audio>
+    <audio id="audio2">
+        <source src="folder\kannichauchmachen.mp3" type="video/mp4"></source>
+    </audio>
+    <audio id="audio3">
+        <source src="folder\Ziegelstein.mp3"></source>
+    </audio>
+    <audio id="audio4">
+        <source src="folder\haveyoueverhadadream.mp3"></source>
+    </audio>
+    <audio id="audio5">
+        <source src="folder\schreibstallesmit.mp3"></source>
+    </audio>
+    <audio id="audio6">
+        <source src="folder\goofy.mp3"></source>
+    </audio>
+    <audio id="audio7">
+        <source src="folder\maulsack.mp3"></source>
+    </audio>
+    <audio id="audio8">
+        <source src="folder\vielepapierflieger.mp3"></source>
+    </audio>
+    
+    
+    
+        <script type="text/javascript">
+           
+             (document).ready(function(){
+                   $ ('audio').each(function(){
+                            this.volume = 0.6;
+                    });
+                  
+            });
+
+            function playIt() {
+                    var n = Math.ceil(Math.random() *8);
+                    $("#audio"+n).trigger('play');
+}
+            
+            
+        </script>
+    <style>
+
+            
+        
+        body{
+            padding: 10%;
+            display: flex;
+          justify-content: center;
+          box-sizing: border-box;
+          align-items: center;
+          background-color: black;
+
+            
+            
+        
+        }
+        #btn{
+            height: 300px;
+            width: 300px;
+            font-size: 50px;
+            text-decoration-color: rgb(255, 255, 255);
+            border-width: 4px;
+            border-radius: 35px;
+            border-color: rgb(27, 130, 130);
+            font-weight: bold;
+            cursor: pointer;
+            color: darkblue;
+        }
+          #btn:active{
+              font-size: 40px;
+          }
+          .text{
+              font-size: 20px;
+              color: white;
+              margin-right: 40px ;
+          }
+        
+    </style>
+</head>
+<body class="bodybackground">
+   <div class="text">NICHT DRÜCKEN --></div> 
+   <button src="folder\button.png" id="btn" class="buttonpicture" onclick="playIt()">NICHT</button>
+    Sound
+   <button class="text video">
+    <a href="video.html">NICHT DRÜCKEN</a>
+   </button>
+</body>
+</html>
